@@ -37,4 +37,19 @@ public class DiningRoomTest {
         diningRoom.addGuest(guest1);
         assertEquals(2, diningRoom.getNumberOfGuests());
     }
+
+    @Test
+    public void canRemoveGuestByName(){
+        diningRoom.addGuest(guest1);
+        diningRoom.addGuest(guest);
+        diningRoom.removeGuestByName("Nathan");
+        assertEquals(1, diningRoom.getNumberOfGuests());
+    }
+
+    @Test
+    public void canFindGuestInListOfGuests(){
+        diningRoom.addGuest(guest1);
+        diningRoom.addGuest(guest);
+        assertEquals(guest1, diningRoom.getGuestByName("Nathan"));
+    }
 }

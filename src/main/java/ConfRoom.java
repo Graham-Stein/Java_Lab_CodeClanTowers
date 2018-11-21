@@ -37,4 +37,22 @@ public class ConfRoom {
     public void addGuest(Guest guest) {
         this.guests.add(guest);
     }
+
+    public void removeGuestByName(String name) {
+        Guest guest = this.getGuestByName(name);
+        if (this.guests.contains(guest)){
+            this.guests.remove(guest);
+        }
+//        return;
+    }
+
+    public Guest getGuestByName(String name) {
+        Guest guestToRemove = null;
+        for (Guest guest : this.guests) {
+            if (guest.name.equals(name)) {
+                guestToRemove = guest;
+            }
+        }
+        return guestToRemove;
+    }
 }

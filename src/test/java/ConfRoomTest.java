@@ -42,4 +42,19 @@ public class ConfRoomTest {
         confRoom.addGuest(guest1);
         assertEquals(2, confRoom.getNumberOfGuests());
     }
+
+    @Test
+    public void canRemoveGuestByName(){
+        confRoom.addGuest(guest1);
+        confRoom.addGuest(guest);
+        confRoom.removeGuestByName("Nathan");
+        assertEquals(1, confRoom.getNumberOfGuests());
+    }
+
+    @Test
+    public void canFindGuestInListOfGuests(){
+        confRoom.addGuest(guest1);
+        confRoom.addGuest(guest);
+        assertEquals(guest1, confRoom.getGuestByName("Nathan"));
+    }
 }

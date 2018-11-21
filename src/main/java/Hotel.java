@@ -53,4 +53,16 @@ public class Hotel {
     public void addDiningRoom(DiningRoom diningRoom) {
         this.diningRoomList.add(diningRoom);
     }
+
+
+
+//    public Guest getGuestByName(String name) {
+//        Guest guestToRemove = null;
+//        for (Guest guest : this.guests) {
+//            if (guest.name.equals(name)) {
+//                guestToRemove = guest;
+//            }
+//        }
+//        return guestToRemove;
+//    }
 }

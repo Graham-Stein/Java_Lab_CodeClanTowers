@@ -17,6 +17,10 @@ public class HotelTest {
     private DiningRoom diningRoom2;
     private Bedroom bedroom;
     private Bedroom bedroom2;
+    private Guest guest;
+    private Guest guest1;
+    private Guest guest2;
+    private Guest guest3;
 
 
     @Before
@@ -31,6 +35,10 @@ public class HotelTest {
         diningRoom2 = new DiningRoom("Glasgow", 1);
         bedroom = new Bedroom(5, 2, "Double");
         bedroom2 = new Bedroom(9, 1, "Single");
+        guest = new Guest("Louise");
+        guest1 = new Guest("Nathan");
+        guest2 = new Guest("Barbara");
+        guest3 = new Guest("Fred");
     }
 
     @Test
@@ -67,5 +75,10 @@ public class HotelTest {
         hotel.addBedroom(bedroom);
         hotel.addBedroom(bedroom2);
         assertEquals(2, hotel.getNumberOfBedrooms());
+    }
+
+    @Test
+    public void canCheckInGuestToBedroom(){
+        // call a method in Hotel that takes guest name, initialises the guest, checks them into a bedroom
     }
 }
