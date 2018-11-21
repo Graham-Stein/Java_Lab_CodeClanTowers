@@ -43,10 +43,10 @@ public class BedroomTest {
     }
 
     @Test
-    public void canRemoveGuest(){
+    public void canRemoveGuestByName(){
         bedroom.addGuest(guest1);
         bedroom.addGuest(guest);
-        bedroom.removeGuestByName(guest);
+        bedroom.removeGuestByName("Barbara");
         assertEquals(1, bedroom.getRoomGuests());
     }
 

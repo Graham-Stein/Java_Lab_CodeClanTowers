@@ -38,11 +38,12 @@ public class Bedroom {
         this.guests.add(guest);
     }
 
-    public void removeGuestByName(Guest guest){
+    public void removeGuestByName(String name){
+        Guest guest = this.getGuestByName(name);
         if (this.guests.contains(guest)){
                 this.guests.remove(guest);
             }
-        return;
+//        return;
         }
 
     public Guest getGuestByName(String name) {
