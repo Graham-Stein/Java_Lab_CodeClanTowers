@@ -49,4 +49,11 @@ public class BedroomTest {
         bedroom.removeGuestByName(guest);
         assertEquals(1, bedroom.getRoomGuests());
     }
+
+    @Test
+    public void canFindGuestInListOfGuests(){
+        bedroom.addGuest(guest1);
+        bedroom.addGuest(guest);
+        assertEquals(guest, bedroom.getGuestByName("Barbara"));
+    }
 }
