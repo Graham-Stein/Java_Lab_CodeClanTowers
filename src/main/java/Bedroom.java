@@ -4,14 +4,14 @@ public class Bedroom {
 
     private int roomNumber;
     private int capacity;
-    private ArrayList<Guest> bedroom;
+    private ArrayList<Guest> guests;
     private String roomType;
 
     public Bedroom(int roomNumber, int capacity, String roomType){
         this.roomNumber = roomNumber;
         this.capacity = capacity;
         this.roomType = roomType;
-        this.bedroom = new ArrayList<>();
+        this.guests = new ArrayList<>();
     }
 
     public int getRoomNumber() {
@@ -22,12 +22,12 @@ public class Bedroom {
         return this.capacity;
     }
 
-    public ArrayList<Guest> getBedroom() {
-        return bedroom;
+    public ArrayList<Guest> getGuests() {
+        return guests;
     }
 
     public int getRoomGuests(){
-        return this.bedroom.size();
+        return this.guests.size();
     }
 
     public String getRoomType() {
@@ -35,6 +35,14 @@ public class Bedroom {
     }
 
     public void addGuest(Guest guest) {
-        this.bedroom.add(guest);
+        this.guests.add(guest);
     }
+
+    public void removeGuestByName(Guest guest){
+        if (this.guests.contains(guest)){
+                this.guests.remove(guest);
+            }
+        return;
+        }
+
 }
